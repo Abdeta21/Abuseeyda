@@ -1,39 +1,152 @@
 <!DOCTYPE html>
 <html lang="om">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhabbata Abseeyda</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhabbata Abuseeyda</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- HEADER -->
-<header>
-    <div class="logo">DHABBAATA ABSEEYDA</div>
-
-    <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="#khabira">Khabira</a>
-        <a href="#khadamtu">Khadamtu</a>
-        <a href="#team">Team</a>
-        <a href="#dargaa">Dargaa</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="menu">☰</div>
+<header class="top-header">
+  <a class="brand" href="#home">DHABBAATA ABUSEEYDA</a>
+  <nav id="nav">
+    <a class="active" href="#home">Home</a>
+    <a href="#khabira">Khabira</a>
+    <a href="#khadamtu">Khadamtu</a>
+    <a href="#team">Team</a>
+    <a href="#dargaa">Dargaa</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">☰</button>
 </header>
 
+<main id="home">
 
-<!-- HERO -->
-<section class="hero">
+  <section class="profile">
+    <div class="cover"></div>
+    <div class="profile-main">
+      <div class="profile-picture">
+        <img src="logo.png" alt="Dhabbata Abuseeyda">
+      </div>
+      <div class="profile-info">
+        <h1>Dhabbata Abuseeyda</h1>
+        <p>🌍 Hawaasa • Dargaggoota • Tokkummaa • Hojii</p>
+        <div class="actions">
+          <button class="follow">＋ Follow</button>
+          <a class="message" href="#contact">💬 Message</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div class="hero-text">
-        <p class="welcome">BAGA NAGAAN DHUFTAN 👋</p>
+  <section class="stories-wrap">
+    <div class="stories">
+      <article class="story create">
+        <img src="logo.png" alt="">
+        <span class="plus">+</span>
+        <strong>Create Story</strong>
+      </article>
+      <article class="story story-1">
+        <img src="logo.png" alt="">
+        <span class="story-icon">📰</span>
+        <strong>Khabira Haaraa</strong>
+      </article>
+      <article class="story story-2">
+        <img src="logo.png" alt="">
+        <span class="story-icon">👥</span>
+        <strong>Team Keenya</strong>
+      </article>
+      <article class="story story-3">
+        <img src="logo.png" alt="">
+        <span class="story-icon">🚀</span>
+        <strong>Dargaa</strong>
+      </article>
+      <article class="story story-4">
+        <img src="logo.png" alt="">
+        <span class="story-icon">🛠️</span>
+        <strong>Khadamtu</strong>
+      </article>
+    </div>
+  </section>
 
-        <h1>
-            Dhabbata <span>Abseeyda</span>
+  <section class="hero">
+    <div>
+      <span class="eyebrow">BAGA NAGAAN DHUFTAN 👋</span>
+      <h2>Dhabbata <span>Abuseeyda</span></h2>
+      <p>Odeeffannoo, tajaajila, hojii fi carraa dargaggootaa walitti fiduun hawaasa keenya cimsuuf hojjenna.</p>
+      <div class="hero-buttons">
+        <a href="#khabira">Khabira Ilaali</a>
+        <a class="outline" href="#khadamtu">Khadamtu Ilaali</a>
+      </div>
+    </div>
+    <div class="hero-logo">
+      <img src="logo.png" alt="Dhabbata Abuseeyda logo">
+    </div>
+  </section>
+
+  <section id="khabira" class="section">
+    <div class="heading">
+      <span>📰</span><h2>Khabira</h2>
+      <p>Odeeffannoo haaraa fi beeksisa keenya.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="icon">📰</div><h3>Odeeffannoo Haaraa</h3><p>Khabira fi odeeffannoo yeroo ammaa hawaasa keenyaaf dhiyeessina.</p><a href="#">Dabalata →</a></article>
+      <article class="card"><div class="icon">📢</div><h3>Beeksisa</h3><p>Beeksisa hojii, sagantaa fi odeeffannoo barbaachisaa.</p><a href="#">Dabalata →</a></article>
+      <article class="card"><div class="icon">🌍</div><h3>Hawaasa</h3><p>Hojii fi sochii hawaasa keenya keessatti raawwatamu hordofi.</p><a href="#">Dabalata →</a></article>
+    </div>
+  </section>
+
+  <section id="khadamtu" class="section light">
+    <div class="heading">
+      <span>🛠️</span><h2>Khadamtu</h2>
+      <p>Tajaajiloota keenya.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="icon">💻</div><h3>Technology</h3><p>Technology fi digital irratti tajaajila kennina.</p></article>
+      <article class="card"><div class="icon">🎓</div><h3>Barnoota</h3><p>Beekumsa fi barnoota dargaggootaaf qoodna.</p></article>
+      <article class="card"><div class="icon">🤝</div><h3>Gargaarsa</h3><p>Hawaasa fi dargaggootaaf gargaarsa ni goona.</p></article>
+    </div>
+  </section>
+
+  <section id="team" class="section">
+    <div class="heading"><span>👥</span><h2>Team Keenya</h2><p>Garee keenya waliin hojjetan.</p></div>
+    <div class="team">
+      <article class="member"><div class="avatar">👨🏾‍💻</div><h3>Team Member</h3><p>Developer</p></article>
+      <article class="member"><div class="avatar">👨🏾‍💼</div><h3>Team Member</h3><p>Manager</p></article>
+      <article class="member"><div class="avatar">👩🏾‍💻</div><h3>Team Member</h3><p>Designer</p></article>
+    </div>
+  </section>
+
+  <section id="dargaa" class="dargaa">
+    <span>DARGAGGOOTA 💚</span>
+    <h2>Dargaa Irratti Dalaguu</h2>
+    <p>Dargaggoonni keenya carraa hojii, technology, barnoota fi hojii hawaasummaa keessatti akka hirmaatan ni deeggarra.</p>
+    <a href="#contact">Nu Waliin Hojjedhu →</a>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="heading"><span>📞</span><h2>Nu Qunnami</h2><p>Yaada ykn gaaffii yoo qabaatte nu qunnami.</p></div>
+    <div class="contact-box">
+      <p>📧 <b>Email:</b> AbuseeydaAbdeta@gmail.com</p>
+      <p>📱 <b>Phone:</b> +251 98160823</p>
+      <p>📍 <b>Location:</b> Ethiopia</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <img src="logo.png" alt="Logo">
+  <h2>DHABBAATA ABUSEEYDA</h2>
+  <p>Tokkummaa • Hojii • Guddina</p>
+  <div class="social"><a href="#">Facebook</a><a href="#">Telegram</a><a href="#">TikTok</a></div>
+  <small>© 2026 Dhabbata Abuseeyda. All Rights Reserved.</small>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
         </h1>
 
         <p>
