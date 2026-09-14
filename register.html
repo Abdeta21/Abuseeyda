@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Abuseeyda - Register</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+
+      background: linear-gradient(
+        135deg,
+        #111111,
+        #2b0000,
+        #8b0000
+      );
+    }
+
+    .register-box {
+      width: 100%;
+      max-width: 420px;
+
+      background: white;
+      padding: 30px;
+
+      border-radius: 20px;
+
+      box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    .logo {
+      width: 70px;
+      height: 70px;
+
+      margin: 0 auto 15px;
+
+      border-radius: 50%;
+
+      background: #8b0000;
+      color: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    h1 {
+      text-align: center;
+      color: #8b0000;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #777;
+
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+    label {
+      display: block;
+
+      margin-top: 14px;
+      margin-bottom: 7px;
+
+      font-size: 14px;
+      font-weight: bold;
+
+      color: #333;
+    }
+
+    input,
+    select {
+      width: 100%;
+
+      padding: 13px;
+
+      border: 1px solid #ddd;
+      border-radius: 10px;
+
+      outline: none;
+
+      font-size: 15px;
+
+      background: #fafafa;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #8b0000;
+      background: white;
+    }
+
+    button {
+      width: 100%;
+
+      margin-top: 22px;
+
+      padding: 14px;
+
+      border: none;
+      border-radius: 10px;
+
+      background: #8b0000;
+      color: white;
+
+      font-size: 16px;
+      font-weight: bold;
+
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #650000;
+    }
+
+    .login-text {
+      text-align: center;
+
+      margin-top: 20px;
+
+      color: #777;
+      font-size: 14px;
+    }
+
+    .login-text a {
+      color: #8b0000;
+
+      font-weight: bold;
+
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="register-box">
+
+    <div class="logo">
+      A
+    </div>
+
+    <h1>Create Account</h1>
+
+    <p class="subtitle">
+      Join Abuseeyda Organization
+    </p>
+
+    <form onsubmit="registerUser(event)">
+
+      <!-- Full Name -->
+      <label>Full Name</label>
+
+      <input
+        type="text"
+        id="fullName"
+        placeholder="Enter your full name"
+        required
+      >
+
+
+      <!-- Email -->
+      <label>Email</label>
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Enter your email"
+        required
+      >
+
+
+      <!-- Password -->
+      <label>Password</label>
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Create password"
+        required
+      >
+
+
+      <!-- Confirm Password -->
+      <label>Confirm Password</label>
+
+      <input
+        type="password"
+        id="confirmPassword"
+        placeholder="Confirm your password"
+        required
+      >
+
+
+      <!-- Where are you from -->
+      <label>Where are you from?</label>
+
+      <select id="location" required>
+
+        <option value="">
+          Select your location
+        </option>
+
+        <option>
+          Oromia
+        </option>
+
+        <option>
+          Hararghe
+        </option>
+
+        <option>
+          Dire Dawa
+        </option>
+
+        <option>
+          Addis Ababa
+        </option>
+
+        <option>
+          Jimma
+        </option>
+
+        <option>
+          Other
+        </option>
+
+      </select>
+
+
+      <!-- Gender -->
+      <label>Gender</label>
+
+      <select id="gender" required>
+
+        <option value="">
+          Select gender
+        </option>
+
+        <option>
+          Male
+        </option>
+
+        <option>
+          Female
+        </option>
+
+        <option>
+          Other
+        </option>
+
+      </select>
+
+
+      <!-- Register Button -->
+      <button type="submit">
+        Create Account
+      </button>
+
+    </form>
+
+
+    <div class="login-text">
+
+      Already have an account?
+
+      <a href="index.html">
+        Login
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    function registerUser(event) {
+
+      event.preventDefault();
+
+      const password =
+        document.getElementById("password").value;
+
+      const confirmPassword =
+        document.getElementById("confirmPassword").value;
+
+
+      if (password !== confirmPassword) {
+
+        alert("Passwords do not match!");
+
+        return;
+      }
+
+
+      alert(
+        "Account created successfully!"
+      );
+
+
+      window.location.href =
+        "personal.html";
+
+    }
+
+  </script>
+
+</body>
+</html>
